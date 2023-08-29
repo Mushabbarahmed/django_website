@@ -1,9 +1,7 @@
-# big mart sales prediction using ml and Flask.
+# big mart sales prediction using ml and Flask
 
 
-
-
-Note: To run this
+Note: To run this follow the steps
  step1:run the Untitled1.ipynb in jupitornotebook or visual code.
  step2:after running the above step succesfully.
        dtrs.pkl file will be generated copy the path of this file and 

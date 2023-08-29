@@ -1,4 +1,4 @@
-# big mart sales prediction using ml
+# big mart sales prediction using ml and Flask
 
 
 Note: To run this

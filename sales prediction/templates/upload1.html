@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<style>
+    .navigation
+        {
+
+        }
+    .navigation ul
+        {
+            overflow:auto;
+        }
+
+    .nav-li
+        {
+            color:white;
+            font-weight:bold;
+            list-style:none;
+            margin:20px;
+            text-decoration:none;
+            float:right;
+        }
+
+    .div-img
+        {
+            background-image:url("{{url_for('static',filename='assets/sales_shop/w2.jpg')}}");
+            background-repeat:no-repeat;
+            background-size:cover;
+            height:100vh;
+
+        }
+    .div
+        {
+            height:600px;
+            justify-content:center;
+            display:flex;
+            justify-content:center;
+        }
+    .div1
+        {
+            border-radius:20px;
+            background-color: RGB(42, 157, 244);
+            opacity:.9;
+            width:450px;
+            height:400px;
+            margin:80px;
+            display:flex;
+            flex-direction:column;
+            flex-wrap:wrap;
+            justify-content:center;
+            align-item:center;
+        }
+
+    .div1-img
+        {
+            width:230px;
+            height:100px;
+            align:center;
+        }
+
+
+    .div1-text
+        {
+            text-align:center;
+            font-weight:bold;
+            border-radius:20px;
+            height:30px;
+            margin:10px;
+            width:350px;
+        }
+    #div1-id
+        {
+            margin:80px;
+            width:100px;
+        }
+    .div1-a
+        {
+            color:black;
+            font-weight:bold;
+            margin:2px;
+            width:200px;
+       }
+   .div1-ad
+        {
+           margin:20px;
+           display:flex;
+        }
+   #div1-a1
+        {
+            margin:2px;
+        }
+   .form1
+        {
+            height:100px;
+            padding:20px;
+        }
+
+   .nav-ul-a
+        {
+            text-decoration:none;
+            color:white;
+            font-size:20px;
+
+            font-style:comic-sans-ms;
+        }
+
+   .nav-ul-a:hover
+        {
+            color:red;
+        }
+
+   .nav-ul-a:active
+        {
+            color:yellow;
+        }
+</style>
+
+
+<body>
+<div class="div-img">
+
+<nav class="navigation">
+  <ul class="nav-ul">
+    <li class="nav-li"><a class="nav-ul-a" href="{{url_for('index')}}">HOME</a></li>
+    <li class="nav-li"><a class="nav-ul-a" href="{{url_for('login')}}">LOGIN</a></li>
+      <li class="nav-li"><a  class="nav-ul-a" href="{{url_for('upload')}}">UPLOAD</a></li>
+  </ul>
+</nav>
+<div class="div"><center>    <div class="div1">
+<center>    <img class="div1-img" src="{{url_for('static',filename='assets/sales_shop/w6.jpg')}}"></center>
+
+    <form action="http://localhost:5000/preview" name="fs"  method="post" enctype=multipart/form-data class="form1">
+    <input type="file" name="datasetfile" id="file1" required />
+                       <br/>
+					   <br/>
+					   <br/>
+                <center><input type="submit" style="margin-right:250px" class="up" value="Upload"></center>
+    </form>
+    </div>
+
+</center>
+
+</div>
+</div>
+</body>
+</html>

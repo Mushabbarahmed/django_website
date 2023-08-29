@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<style>
+    .navigation
+        {
+
+        }
+    .navigation ul
+        {
+            overflow:auto;
+        }
+
+    .nav-li
+        {
+            color:white;
+            font-weight:bold;
+            list-style:none;
+            margin:20px;
+            text-decoration:none;
+            float:right;
+        }
+
+    .div-img
+        {
+            background-image:url("{{url_for('static',filename='assets/sales_shop/w2.jpg')}}");
+            background-repeat:no-repeat;
+            background-size:cover;
+            height:100vh;
+
+        }
+    .div
+        {
+            height:600px;
+            justify-content:center;
+            display:flex;
+
+            justify-content:center;
+            flex-direction:column;
+        }
+    .div1
+        {
+            border-radius:20px;
+            background-color: RGB(42, 157, 244);
+            opacity:.9;
+            width:1000px;
+            height:400px;
+            display:flex;
+            flex-direction:column;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+    .div1-img
+        {
+            width:230px;
+            height:100px;
+        }
+.center{
+}
+    .div1-text
+        {
+            text-align:center;
+            font-weight:bold;
+            border-radius:20px;
+            height:30px;
+            margin:10px;
+            width:350px;
+        }
+    #div1-id
+        {
+            margin:80px;
+            width:100px;
+        }
+    .div1-a
+        {
+            color:black;
+            font-weight:bold;
+            margin:2px;
+            width:200px;
+       }
+   .div1-ad
+        {
+           margin:20px;
+           display:flex;
+        }
+   #div1-a1
+        {
+            margin:2px;
+        }
+   .form1
+        {
+            height:260px;
+        }
+
+   .nav-ul-a
+        {
+            text-decoration:none;
+            color:white;
+            font-size:20px;
+
+            font-style:comic-sans-ms;
+        }
+
+   .nav-ul-a:hover
+        {
+            color:red;
+        }
+#button1{
+        border:3px solid black;
+        padding:1px 44px;
+        border-radius:20px;
+        }
+   .nav-ul-a:active
+        {
+            color:yellow;
+        }
+        .td-text{font-weight:bold;}
+        .td-text-last{font-weight:bold;
+        background-color:black;
+        width:500px;
+        color:white;
+        border-radius:20px;}
+</style>
+
+
+<body>
+<div class="div-img">
+
+<nav class="navigation">
+  <ul class="nav-ul">
+    <li class="nav-li"><a class="nav-ul-a" href="{{url_for('index')}}">HOME</a></li>
+    <li class="nav-li"><a class="nav-ul-a" href="{{url_for('login')}}">LOGIN</a></li>
+      <li class="nav-li"><a  class="nav-ul-a" href="{{url_for('chart')}}">CHART</a></li>
+      <li class="nav-li"><a  class="nav-ul-a" href="{{url_for('performance')}}">PERFORMANCE</a></li>
+  </ul>
+</nav>
+<div class="div"><center>
+    <div class="div1">
+    <center>    <img class="div1-img" src="{{url_for('static',filename='assets/sales_shop/w6.jpg')}}"></center>
+
+    <form action="http://localhost:5000/predict" method="post" class="form1">
+    <center> <table>
+
+				<tbody>
+
+                    <td class="td-text">Item_Type:</td>
+                        <td  class="td-text">
+                            <select type="text" id= "item_Type"  class="td-text" name="Item_Type" method="post" required="required" placeholder="Item_Type" width="300" style="width: 300px">
+
+							       <option value="0">Dairy</option>
+						      <option value="1">Soft Drinks</option>
+							  <option value="2">Meat</option>
+						      <option value="3">Fruits and Vegetables</option>
+							  <option value="4">Household</option>
+						      <option value="5">Baking Goods</option>
+							  <option value="6">Snack Foods</option>
+						      <option value="7">Frozen Foods</option>
+							  <option value="8">Breakfast</option>
+							  <option value="9">Health and Hygiene</option>
+							   <option value="10">Hard Drinks</option>
+							   <option value="11">Canned</option>
+							   <option value="12">Breads</option>
+							   <option value="13">Starchy Foods</option>
+							   <option value="14">Others</option>
+							   <option value="15">Seafood</option>
+                            </select>
+                        </td>
+                        <td  class="td-text">Item_Weight:</td>
+                        <td  class="td-text">
+
+                             <input type="text" id="item_Weight"   class="td-text" type="text" name="Item_Weight" placeholder="Item_Weight" required="required" width="300" style="width: 300px" >
+
+
+                        </td>
+						 </tbody>
+                    <!-- Row 1 -->
+                    <tbody>
+                        <td  class="td-text">Item_MRP:</td>
+                        <td  class="td-text">
+
+                             <input type="text" id="item_MRP" type="text" name="Item_MRP" placeholder="Item_MRP" required="required" width="300" style="width: 300px"  class="td-text">
+
+
+                        </td>
+                        <td  class="td-text">Item_Visibility:</td>
+                        <td>
+
+                             <input  class="td-text" type="text" id="item_Visibility" type="text" name="Item_Visibility" placeholder="Item_Visibility" required="required" width="300" style="width: 300px" >
+
+
+                        </td>
+                    </tbody>
+
+					</br>
+					</br>
+				<tbody>
+				<td  class="td-text">Item_Fat_Content:</td>
+                        <td>
+                            <select  class="td-text" type="text" id= "item_Fat_Content" name="Item_Fat_Content" method="post" required="required" placeholder="Item_Fat_Content" width="300" style="width: 300px">
+                                   <option value="1">Low Fat</option>
+
+						      <option value="0">Regular</option>
+
+                                <option value="2">Non-Edible</option>
+
+                            </select>
+                        </td>
+                        <td  class="td-text">Outlet_Establishment_Year:</td>
+                        <td>
+
+                             <input type="text"  class="td-text" id= "outlet_Establishment_Year" type="text" name="Outlet_Establishment_Year" placeholder="Outlet_Establishment_Year" required="required" width="300" style="width: 300px" >
+
+
+                        </td>
+
+                    </tbody>
+                    <!-- Row 2 -->
+                    <tbody>
+
+                        <td  class="td-text">Outlet_Size:</td>
+                        <td>
+                            <select type="text"  class="td-text" id="outlet_Size" name="Outlet_Size" method="post" required="required" placeholder="Outlet_Size" width="300" style="width: 300px">
+                                   <option value="0">Small</option>
+						      <option value="1">Medium</option>
+							  <option value="2">High</option>
+
+
+
+                            </select>
+                        </td>
+						<td  class="td-text"> Outlet_Location_Type:</td>
+                        <td>
+                            <select type="text"  class="td-text" id="outlet_Location_Type" name="Outlet_Location_Type" method="post" required="required" placeholder="Outlet_Location_Type" width="300" style="width: 300px">
+                                   <option value="0">Tier 1</option>
+						      <option value="1">Tier 2</option>
+
+							   <option value="2">Tier 3</option>
+
+
+                            </select>
+                        </td>
+
+                    </tbody>
+					</br>
+                    <!-- Row 3 -->
+                    <tbody>
+
+                        <td  class="td-text">Outlet_Type:</td>
+                        <td>
+                            <select type="text"  class="td-text" id= "outlet_Type" name="Outlet_Type" method="post" required="required" placeholder="Outlet_Type" width="300" style="width: 300px">
+                                <option value="0">Supermarket Type1</option>
+							   <option value="1">Supermarket Type2</option>
+							  <option value="2">Supermarket Type3</option>
+						      <option value="3">Grocery Store </option>
+
+
+                            </select>
+                        </td>
+
+
+                    </tbody>
+
+                    <!-- Row 4 --></br>
+
+
+
+                </table></center>
+				</br>
+
+
+    <div class="center">
+                  <center>  <button type="submit"   class="td-text" id="button1">Predict</button> </center>
+                </div>
+    </div>
+		 </br>
+			 <center> <h1 class="td-text-last" > <span class="color-b">Prediction is:  {{ prediction_text }}</span></h1></center>
+        </form></center>
+
+</center>
+
+                  </div>
+    </div>
+
+
+</body>
+</html>

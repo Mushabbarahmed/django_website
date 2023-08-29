@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sales</title>
+</head>
+<style>
+
+body
+    {
+        background-color:	rgb(220,220,220);
+    }
+.navigation ul
+    {
+      border:2px solid white;
+      border-radius:20px;
+      background-color:rgb(220,1110,221);
+      overflow:auto;
+    }
+
+.li2
+    {
+         color:purple;
+         float:right;
+         margin:7px;
+         list-style:none;
+     }
+
+.li2 a
+    {
+        font-family: 'arial black';
+        font-size:26px;
+        text-decoration:none;
+        color:red;
+    }
+.li2 a:hover
+    {
+        color:green;
+    }
+
+.li1
+    {
+        align:center;
+        font-family: 'arial black';
+        color:white;
+        float:left;
+        padding:10px;
+        margin:10px;
+        list-style:none;
+        text-decoration:none;
+  }
+
+.li1 a
+    {
+        color:black;
+        text-decoration:none;
+    }
+
+.li1 a:hover
+    {
+        color:green;
+   }
+
+.just
+    {
+        height:650px;
+        display:grid;
+        grid-template-columns:1fr 9fr 1fr;
+        grid-gap:2rem;
+    }
+
+
+.just1
+    {
+        background-color:black;
+        border-radius:20px;
+
+    }
+.just22
+    {
+        display:grid;
+        grid-template-columns:4fr 4fr;
+    }
+.just3
+    {
+        background-color:black;
+        border-radius:20px;
+    }
+.just2
+    {
+        margin:20px;
+    }
+.img1
+    {
+        border-radius:20px;
+        width:600px;
+        height:280px;
+        }
+footer
+    {
+        height:1rem;
+    }
+.waviy
+     {
+
+          -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+          font-size: 40px;
+          justify-content:center;
+        text-align:center;
+     }
+.waviy span
+  {
+     margin:2PX;
+      font-family: 'Garamond', cursive;
+      position: relative;
+      display: inline-block;
+      color: white;
+      text-transform: uppercase;
+      animation: waviy 1s infinite;
+      animation-delay: calc(.1s * var(--i));
+
+  }
+  @keyframes waviy
+  {
+      0% {
+        transform: translateY(0)
+      }
+      20% {
+        transform: translateY(-20px)
+      }
+  }
+
+.ayag{width:200px;
+        height:50px;}
+</style>
+<body>
+<nav class="navigation">
+  <ul>
+    <li class="li2">     <img class="ayag" src="{{url_for('static',filename='assets/sales_shop/w6.jpg')}}">
+    </li>
+
+    <li class="li1"><a href="{{url_for('index')}}">HOME</a></li>
+    <li class="li1"><a href="{{url_for('login')}}">LOGIN</a></li>
+
+  </ul>
+</nav>
+<div class="just">
+    <div class="just1">
+        <div class="waviy">
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1"></span>
+           <span style="--i:1">s</span>
+           <span style="--i:3">A</span>
+           <span style="--i:4">L</span>
+           <span  style="--i:5">E</span>
+           <span   style="--i:6">S </span>
+           <span   style="--i:6"> </span>
+
+        </div>
+    </div>
+    <div class ="just22">
+
+    <div class="just2"><img class="img1" src="{{url_for('static',filename='assets/sales_shop/w1.jpg')}}"></div>
+    <div class="just2"><img class="img1" src="{{url_for('static',filename='assets/sales_shop/w2.jpg')}}"></div>
+    <div class="just2"><img  class="img1" src="{{url_for('static',filename='assets/sales_shop/w3.jpg')}}"></div>
+    <div class="just2"><img  class="img1" src="{{url_for('static',filename='assets/sales_shop/w4.jpg')}}"></div>
+    </div>
+    <div class="just3">
+
+        <div class="waviy">
+        <span   style="--i:7"></span>
+        <span   style="--i:7"></span>
+        <span   style="--i:7"></span>
+        <span   style="--i:7"></span>
+        <span   style="--i:7"></span>
+        <span   style="--i:7">P</span>
+       <span style="--i:8">R</span>
+       <span  style="--i:9">E</span>
+       <span style="--i:10">D</span>
+       <span  style="--i:11">I</span>
+       <span style="--i:12">C</span>
+       <span  style="--i:13">T</span>
+       <span style="--i:14">I</span>
+       <span  style="--i:15">O</span>
+       <span style="--i:16">N</span>
+
+        </div>
+    </div>
+</div>
+<footer>
+    <h1>dont</h1>
+</footer>
+</body>
+</html>
